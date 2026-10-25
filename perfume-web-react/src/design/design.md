@@ -87,12 +87,6 @@ Index numerals (`01`–`04`) use Playfair Display at roughly 16px in `brown-600`
 - Floating white bar, 56px high, inset from page edges, radius 4px, soft shadow.
 - Left: hamburger plus "SHOP" in small caps. Center: logo ("Floras" serif, tagline in small serif). Right: user and search icons.
 
-```css
-.logo {
-  font-family: var(--font-heading); /* Playfair Display */
-}
-```
-
 ### Buttons
 - **Primary:** background `brown-800`, white text, radius 4px, padding 12px 24px, 12–13px type. Hover: `brown-900`.
 - **Input and submit pair (newsletter):** white input flush with a brown submit button, same height (~44px).
