@@ -1,0 +1,164 @@
+/* ==========================================================
+   FLORAS: COLOR TOKENS (UI colors only, no photo colors)
+   ----------------------------------------------------------
+   Structure:
+   1. Palette      -> the raw colors (don't use directly in components)
+   2. Page & text  -> backgrounds, headings, body text
+   3. Sections     -> navbar, hero, features, collections,
+                      note cards, promo, newsletter, footer
+   4. Buttons, borders, shadows
+   5. Font families (heading font + text font)
+   ========================================================== */
+
+:root {
+
+  /* ========================================================
+     1. PALETTE (raw values)
+     ======================================================== */
+
+  /* Browns: headings, buttons, accents */
+  --brown-900: #3f2b1e;   /* darkest: button hover, strong text */
+  --brown-800: #5a3f2b;   /* buttons, big display words (NEW, COLLECTIONS) */
+  --brown-700: #6f4d36;   /* all headings */
+  --brown-600: #8b6246;   /* small accents: numbers, divider lines, promo code */
+
+  /* Grays: supporting text */
+  --gray-600: #8a7b70;    /* body paragraphs */
+  --gray-400: #a99b90;    /* small / faint text, placeholders */
+
+  /* Light surfaces */
+  --white:     #ffffff;   /* cards, navbar, inputs */
+  --offwhite:  #f7f6f4;   /* page background */
+  --sand-200:  #efe8e0;   /* footer speckle, soft panels */
+  --blush-100: #fdeee8;   /* icon circle background */
+
+
+  /* ========================================================
+     2. PAGE & TEXT (global defaults)
+     ======================================================== */
+
+  --page-bg:        var(--offwhite);   /* <body> background */
+  --text-heading:   var(--brown-700);  /* h1, h2, h3 everywhere */
+  --text-body:      var(--gray-600);   /* normal paragraphs */
+  --text-muted:     var(--gray-400);   /* small print, captions */
+  --text-accent:    var(--brown-600);  /* small highlighted text */
+  --text-on-dark:   var(--white);      /* text on dark buttons */
+
+
+  /* ========================================================
+     3. SECTIONS
+     ======================================================== */
+
+  /* ---- Navbar (floating white bar at top) ---- */
+  --nav-bg:          var(--white);       /* bar background */
+  --nav-text:        var(--brown-800);   /* "SHOP" label */
+  --nav-logo:        var(--brown-700);   /* "Floras" logo name */
+  --nav-tagline:     var(--gray-600);    /* "Wellness & Fragmented" */
+  --nav-icon:        var(--brown-700);   /* user + search icons */
+
+  /* ---- Hero ("Fragrance World Class") ---- */
+  --hero-eyebrow:    var(--gray-600);    /* "Premium Fragrance" */
+  --hero-title:      var(--brown-700);   /* big headline */
+  --hero-text:       var(--gray-400);    /* description under headline */
+  --hero-scroll:     var(--gray-600);    /* "Scroll Down" + its line */
+
+  /* ---- Section titles ("The Fragrance Difference", "A Multi-Layered Harmony") ---- */
+  --section-title:   var(--brown-700);   /* centered H2 */
+  --section-divider: var(--brown-600);   /* short line under the H2 */
+
+  /* ---- Feature list (01, 02, 03, 04) ---- */
+  --feature-number:  var(--brown-600);   /* 01 / 02 / 03 / 04 */
+  --feature-title:   var(--brown-700);   /* "Sustainably Sourced", etc. */
+  --feature-text:    var(--gray-600);    /* description lines */
+
+  /* ---- Collections (NEW / COLLECTIONS) ---- */
+  --collection-word: var(--brown-800);   /* "NEW" and vertical "COLLECTIONS" */
+
+  /* ---- Note cards (Floral / Woody / Musk) ---- */
+  --card-bg:         var(--white);       /* card background */
+  --card-icon-bg:    var(--blush-100);   /* circle behind the icon */
+  --card-icon:       var(--brown-700);   /* the icon itself */
+  --card-title:      var(--brown-700);   /* "Floral", "Woody", "Musk" */
+  --card-text:       var(--gray-600);    /* card description */
+
+  /* ---- Promo (Get 15% Off) ---- */
+  --promo-code:      var(--brown-600);   /* "FRAGRANCE15" */
+  --promo-title:     var(--brown-700);   /* "Get 15% Off" */
+  --promo-text:      var(--gray-600);    /* paragraph text */
+  --promo-subtitle:  var(--brown-600);   /* "Oz Body Lotion (Unboxed)" */
+  --promo-ring:      var(--brown-600);   /* dashed circle around the image */
+  --promo-badge-bg:  var(--white);       /* small round fruit/flower badges */
+
+  /* ---- Newsletter banner ---- */
+  --newsletter-title:       var(--brown-600);   /* "Subscribe Newsletter & Get Latest News" */
+  --newsletter-input-bg:    var(--white);       /* email field background */
+  --newsletter-input-text:  var(--gray-600);    /* typed text */
+  --newsletter-placeholder: var(--gray-400);    /* "Enter Your E-mail" */
+
+  /* ---- Footer ---- */
+  --footer-bg:       var(--offwhite);    /* footer background */
+  --footer-brand:    var(--brown-700);   /* big "Floras" wordmark */
+  --footer-tagline:  var(--brown-600);   /* "Wellness & Fragmented" */
+  --footer-text:     var(--brown-800);   /* copyright, Privacy, Terms */
+  --footer-speckle:  var(--sand-200);    /* dotted texture on the sides */
+
+
+  /* ========================================================
+     4. BUTTONS, BORDERS, SHADOWS
+     ======================================================== */
+
+  /* ---- Primary button (Explore Scent, All Collections, Shop the offer, Submit) ---- */
+  --btn-bg:          var(--brown-800);
+  --btn-bg-hover:    var(--brown-900);
+  --btn-text:        var(--text-on-dark);
+
+  /* ---- Focus ring (keyboard navigation) ---- */
+  --focus-ring:      var(--brown-600);
+
+  /* ---- Borders ---- */
+  --border-subtle:   rgba(111, 77, 54, 0.15);   /* light brown hairline */
+
+  /* ---- Shadows (brown-tinted, never pure black) ---- */
+  --shadow-nav:      0 2px 16px rgba(63, 43, 30, 0.08);    /* navbar */
+  --shadow-card:     0 4px 24px rgba(111, 77, 54, 0.08);   /* note cards */
+  --shadow-badge:    0 4px 12px rgba(63, 43, 30, 0.12);    /* promo badges */
+
+
+  /* ========================================================
+     5. FONT FAMILIES
+     Load both from Google Fonts:
+     https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400&family=Playfair+Display:wght@400;500&display=swap
+     ======================================================== */
+
+  /* ---- Heading font: serif (elegant, editorial) ---- */
+  --font-heading: "Playfair Display", Georgia, "Times New Roman", serif;
+
+  /* ---- Text font: sans-serif (clean, light) ---- */
+  --font-text: "Montserrat", "Inter", system-ui, -apple-system, sans-serif;
+
+  /* ---- Where the HEADING font (--font-heading) is used ---- */
+  --font-nav-logo:        var(--font-heading);  /* "Floras" logo + tagline in navbar */
+  --font-hero-title:      var(--font-heading);  /* "Fragrance World Class" */
+  --font-section-title:   var(--font-heading);  /* "The Fragrance Difference", "A Multi-Layered Harmony" */
+  --font-feature-number:  var(--font-heading);  /* 01 / 02 / 03 / 04 */
+  --font-feature-title:   var(--font-heading);  /* "Sustainably Sourced", etc. */
+  --font-collection-word: var(--font-heading);  /* "NEW" and vertical "COLLECTIONS" */
+  --font-card-title:      var(--font-heading);  /* "Floral", "Woody", "Musk" */
+  --font-promo-title:     var(--font-heading);  /* "Get 15% Off" + product subtitle */
+  --font-newsletter-title: var(--font-heading); /* "Subscribe Newsletter & Get Latest News" */
+  --font-footer-brand:    var(--font-heading);  /* big "Floras" + tagline in footer */
+
+  /* ---- Where the TEXT font (--font-text) is used ---- */
+  --font-nav-label:       var(--font-text);     /* "SHOP" in navbar */
+  --font-hero-eyebrow:    var(--font-text);     /* "Premium Fragrance" */
+  --font-hero-text:       var(--font-text);     /* hero description paragraph */
+  --font-hero-scroll:     var(--font-text);     /* "Scroll Down" */
+  --font-feature-text:    var(--font-text);     /* feature descriptions */
+  --font-card-text:       var(--font-text);     /* note card descriptions */
+  --font-promo-code:      var(--font-text);     /* "FRAGRANCE15" */
+  --font-promo-text:      var(--font-text);     /* promo paragraphs */
+  --font-button:          var(--font-text);     /* all buttons */
+  --font-input:           var(--font-text);     /* newsletter email field */
+  --font-footer-text:     var(--font-text);     /* copyright, Privacy, Terms */
+  --font-body:            var(--font-text);     /* default for everything else */
+}
