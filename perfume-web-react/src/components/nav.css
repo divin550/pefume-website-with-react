@@ -1,15 +1,151 @@
+/* ── Nav wrapper ───────────────────────────────────────── */
 .nav {
-    background-color: beige;
-    height: auto;
-    min-height: 10vh;
-    color: white;
+    position: sticky;
+    top: 16px;
+    left: 0;
+    right: 0;
+    z-index: 100;
+
     display: flex;
     align-items: center;
-    padding: 10px;
-    overflow: visible;
+    justify-content: space-between;
+
+    width: calc(100% - 48px);
+    max-width: var(--container-max, 1200px);
+    height: var(--nav-height, 56px);
+    margin: 0 auto;
+
+    background: #ffffff;
+    border-radius: var(--radius-sm, 4px);
+    box-shadow: var(--shadow-nav, 0 2px 16px rgba(63, 43, 30, 0.08));
+    padding: 0 24px;
 }
-.logo {
-    font-family: var(--font-heading);
-    /*  Playfair Display */
-    color: #3f2b1e;
+
+/* ── Left: hamburger + SHOP ────────────────────────────── */
+ .nav__left {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.nav__hamburger {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 4px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 4px;
+}
+
+.nav__hamburger span {
+    display: block;
+    width: 20px;
+    height: 1.5px;
+    background-color: var(--color-brown-700, #6f4d36);
+    border-radius: 2px;
+}
+
+.nav__shop {
+    font-family: var(--font-body, "Montserrat", sans-serif);
+    font-size: var(--fs-eyebrow, 0.75rem);
+    font-weight: 400;
+    letter-spacing: var(--tracking-eyebrow, 0.08em);
+    text-transform: uppercase;
+    color: var(--color-brown-800, #5a3f2b);
+    text-decoration: none;
+}
+
+.nav__shop:hover {
+    color: var(--color-brown-900, #3f2b1e);
+}
+
+.nav {
+    position: relative;
+}
+
+.nav__links {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    list-style: none;
+    margin: 0;
+    padding: 20px;
+    background: var(--sand-200);
+    z-index: 100;
+    width: 400px;
+    border-radius: 10px;
+}
+
+.nav__links li {
+    margin-bottom: 15px;
+    padding: 6px 8px;
+    border-radius: 4px;
+    transition: background-color 200ms ease;
+}
+
+.nav__links li:hover {
+    background-color: #a99b90;
+}
+
+.nav__links a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* ── Center: logo + tagline ────────────────────────────── */
+.nav__center {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    line-height: 1.2;
+}
+
+.nav__logo {
+    font-family: var(--font-heading, "Playfair Display", serif);
+    font-size: 1.375rem;
+    /* ~22px */
+    font-weight: 400;
+    color: var(--color-brown-700, #6f4d36);
+    letter-spacing: 0.02em;
+}
+
+.nav__tagline {
+    font-family: var(--font-heading, "Playfair Display", serif);
+    font-size: 0.625rem;
+    /* 10px */
+    font-weight: 400;
+    font-style: italic;
+    color: var(--color-brown-500, #a47b5d);
+    letter-spacing: 0.04em;
+}
+
+/* ── Right: icon buttons ───────────────────────────────── */
+.nav__right {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.nav__icon-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: var(--color-brown-700, #6f4d36);
+    padding: 4px;
+    transition: color 200ms ease;
+}
+
+.nav__icon-btn:hover {
+    color: var(--color-brown-900, #3f2b1e);
+}
+
+.nav__icon-btn:focus-visible {
+    outline: 2px solid var(--divider-accent, #8b6246);
+    outline-offset: 2px;
+    border-radius: 2px;
 }

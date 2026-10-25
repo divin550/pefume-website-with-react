@@ -7,8 +7,9 @@
 }
 
 body {
-  font-family: Arial, sans-serif;
-  background: black;
+  font-family: var(--font-body, "Montserrat", Arial, sans-serif);
+  background: var(--bg-page, #f7f6f4);
+  color: var(--text-body, #8a7b70);
 }
 .main-container{
   padding: 40px;
