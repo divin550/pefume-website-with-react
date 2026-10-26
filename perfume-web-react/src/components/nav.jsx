@@ -9,6 +9,7 @@ gsap.registerPlugin(useGSAP)
 function Nav() {
     const [isOpen, setOpen] = useState(false)
     const menuRef = useRef(null)
+    const [inputOpen, setInput] = useState(false)
 
     useGSAP(() => {
         if (!menuRef.current) return
@@ -71,12 +72,20 @@ function Nav() {
 
             {/* Right: search + user icons */}
             <div className="nav__right">
-                <button className="nav__icon-btn" aria-label="Search">
-                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
-                        <circle cx="11" cy="11" r="8" />
-                        <line x1="21" y1="21" x2="16.65" y2="16.65" />
-                    </svg>
-                </button>
+                <div className="input-feild">
+                    <input
+                        className={`nav__search-input ${inputOpen ? 'open' : ''}`}
+                        type="text"
+                        placeholder="Search..."
+                        aria-label="Search products"
+                    />
+                    <button className="nav__icon-btn" aria-label="Search" onClick={() => { setInput(!inputOpen) }}>
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+                            <circle cx="11" cy="11" r="8" />
+                            <line x1="21" y1="21" x2="16.65" y2="16.65" />
+                        </svg>
+                    </button>
+                </div>
                 <button className="nav__icon-btn" aria-label="Account">
                     <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
                         <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2" />
